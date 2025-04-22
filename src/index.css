@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Neucha&display=swap');
+
+@import "tailwindcss";
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: 'Inter', sans-serif;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(#F4F0FF, #8cbbf0);
+}
+
+.chat-body {
+	scrollbar-width: thin;
+	scrollbar-color: #ddd3f9 transparent;
+}
