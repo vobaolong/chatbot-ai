@@ -13,7 +13,7 @@ function App() {
   const [chatHistory, setChatHistory] = useState<ChatHistory[]>([
     {
       role: 'assistant',
-      text: '🤖✨ Xin chào, tôi là chatbot trợ lý của dịch vụ khách hàng của Dream Home Riverside. Tôi có thể giúp gì cho bạn hôm nay? 😊'
+      text: '🤖✨ Xin chào, em là trợ lý ảo của dịch vụ khách hàng của Dream Home Riverside. Em có thể giúp gì cho anh/chị hôm nay? 😊'
     }
   ])
   const [isOpen, setIsOpen] = useState(false)
@@ -24,7 +24,7 @@ function App() {
     const requestHistory = history.filter(
       (msg) =>
         msg.text !==
-          '🤖✨ Xin chào, tôi là chatbot trợ lý ảo của dịch vụ khách hàng của Dream Home Riverside. Tôi có thể giúp gì cho bạn hôm nay? 😊' &&
+          '🤖✨ Xin chào, em là trợ lý ảo của dịch vụ khách hàng của Dream Home Riverside. Em có thể giúp gì cho anh/chị hôm nay? 😊' &&
         msg.text !== 'Đang xử lý...'
     )
 
@@ -113,7 +113,7 @@ function App() {
       </button>
 
       <div
-        className={`w-[420px] bg-white rounded-lg shadow-lg right-8 fixed bottom-24 transition-all duration-300 origin-bottom-right ${
+        className={`w-[calc(100%-2rem)] max-w-[320px] md:max-w-[380px] lg:max-w-[420px] bg-white rounded-lg shadow-lg right-8 fixed bottom-24 transition-all duration-300 origin-bottom-right ${
           isOpen
             ? 'opacity-100 pointer-events-auto translate-y-0 scale-100'
             : 'opacity-0 pointer-events-none translate-y-16 scale-50'
@@ -124,7 +124,12 @@ function App() {
             <span className='w-9 h-9 p-1.5 bg-white rounded-full shrink-0 fill-[#3d82dd]'>
               <ChatbotIcon />
             </span>
-            <h2 className='text-base font-semibold text-white'>Chatbot</h2>
+            <h2 className='text-base font-semibold text-white'>
+              Chat với nhân viên tư vấn
+              <p className='text-sm font-normal'>
+                Em ở đây để hỗ trợ cho mình ạ
+              </p>
+            </h2>
           </div>
           <button
             className='material-symbols-outlined h-10 w-10 rounded-full text-white cursor-pointer pt-0.5 !-mr-2.5 transition-all duration-200 ease-initial hover:bg-white/10'

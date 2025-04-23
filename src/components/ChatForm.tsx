@@ -47,7 +47,7 @@ const ChatForm = ({
     generateBotResponse([
       {
         role: 'assistant',
-        text: `Tôi là chatbot dịch vụ khách hàng của Dream Home Riverside. Đây là cơ sở kiến thức của tôi: ${companyInfo}`
+        text: `Em là trợ lý ảo của dịch vụ khách hàng của Dream Home Riverside. Đây là cơ sở kiến thức của em: ${companyInfo}`
       },
       ...chatHistory,
       {
